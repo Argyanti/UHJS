@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal 8</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Program Menentukan Tahun Kabisat</h2>
+    <label for="tahun">Masukkan Tahun:</label>
+    <input type="number" id="tahun" name="tahun">
+    <button onclick="cekTahunKabisat()">Cek</button>
+    <p id="hasil"></p>
+<script>
+function cekTahunKabisat() {
+    var tahun = parseInt(document.getElementById("tahun").value);
+
+    if (tahun % 4 === 0) {
+        document.getElementById("hasil").innerHTML = "Tahun " + tahun + " merupakan tahun kabisat.";
+    } else {
+        document.getElementById("hasil").innerHTML = "Tahun " + tahun + " bukan merupakan tahun kabisat.";
+    }
+}
+</script>
+</body>
+</html>

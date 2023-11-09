@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal 6</title>
+</head>
+<body>
+
+<h2 style="text-align: center;">Pengecekan Usia untuk Menonton Bioskop</h2>
+
+<label for="usia">Masukkan Usia Anda:</label>
+<input type="number" id="usia" name="usia" required>
+
+<button type="button" onclick="cekUsia()">Cek Usia</button>
+
+<script>
+    function cekUsia() {
+        // Mendapatkan nilai usia dari input
+        var usia = parseInt(document.getElementById('usia').value);
+
+        // Melakukan pengecekan kondisi
+        if (usia < 5) {
+            alert("Balita tidak boleh menonton ke bioskop.");
+        } else if (usia >= 5 && usia < 18) {
+            alert("Remaja boleh menonton ke bioskop.");
+        } else {
+            alert("Anda boleh menonton ke bioskop.");
+        }
+    }
+</script>
+
+</body>
+</html>

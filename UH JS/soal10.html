@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Program Penghitung Kembalian</h2>
+    <label for="hargaBarang">Harga Barang:</label><br>
+    <input type="number" id="hargaBarang" name="hargaBarang"><br>
+    <label for="uangDibayarkan">Uang yang Dibayarkan:</label><br>
+    <input type="number" id="uangDibayarkan" name="uangDibayarkan"><br><br>
+    <button onclick="hitungKembalian()">Hitung Kembalian</button>
+    <p id="hasilKembalian"></p>
+<script>
+function hitungKembalian() {
+    var hargaBarang = parseInt(document.getElementById("hargaBarang").value);
+    var uangDibayarkan = parseInt(document.getElementById("uangDibayarkan").value);
+
+    if (uangDibayarkan < hargaBarang) {
+        document.getElementById("hasilKembalian").innerHTML = "Uang yang dibayarkan kurang!";
+    } else {
+        var kembalian = uangDibayarkan - hargaBarang;
+        document.getElementById("hasilKembalian").innerHTML = "Kembalian yang harus diberikan: Rp." + kembalian;
+    }
+}
+</script>
+</body>
+</html>

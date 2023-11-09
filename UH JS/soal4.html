@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal 4</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Program Menghitung Keliling Trapesium</h1>
+    <p>Masukkan panjang sisi trapesium:</p>
+    <input type="number" id="sisiA" placeholder="Panjang sisi A">
+    <input type="number" id="sisiB" placeholder="Panjang sisi B">
+    <input type="number" id="sisiC" placeholder="Panjang sisi C">
+    <input type="number" id="sisiD" placeholder="Panjang sisi D">
+    <button onclick="hitungKeliling()">Hitung Keliling</button>
+    <p id="hasilKeliling"></p>
+<script>
+function hitungKeliling() {
+    var a = parseFloat(document.getElementById('sisiA').value);
+    var b = parseFloat(document.getElementById('sisiB').value);
+    var c = parseFloat(document.getElementById('sisiC').value);
+    var d = parseFloat(document.getElementById('sisiD').value);
+
+    var keliling = a + b + c + d;
+    document.getElementById('hasilKeliling').innerHTML = "Keliling dari trapesium adalah : " + keliling;
+}
+</script>
+
+</body>
+</html>

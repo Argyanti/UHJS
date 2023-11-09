@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal 3</title>
+    <style>
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>Form Pembelian Barang Aksesoris</h1>
+<form id="formPembelian">
+    <label for="namaBarang">Pilih Barang:</label>
+    <select id="namaBarang" name="namaBarang">
+        <option value="USB">USB</option>
+        <option value="Memori">Memori</option>
+        <option value="Speaker">Speaker</option>
+    </select>
+    <br>
+    <br>
+    <label for="jumlahBarang">Jumlah Barang:</label>
+    <input type="number" id="jumlahBarang" name="jumlahBarang" min="1" value="1">
+
+    <button type="button" onclick="hitungTotalHarga()">Hitung Total Harga</button>
+</form>
+
+<p id="hasilTotalHarga"></p>
+
+<script>
+    function hitungTotalHarga() {
+        var namaBarang = document.getElementById('namaBarang').value;
+        var jumlahBarang = parseInt(document.getElementById('jumlahBarang').value);
+        var hargaSatuan = 0;
+        switch (namaBarang) {
+            case 'USB':
+                hargaSatuan = 20000;
+                break;
+            case 'Memori':
+                hargaSatuan = 50000;
+                break;
+            case 'Speaker':
+                hargaSatuan = 20000;
+                break;
+            default:
+                break;
+        }
+        var totalHarga = hargaSatuan * jumlahBarang;
+        document.getElementById('hasilTotalHarga').innerHTML = 'Total Harga untuk ' + jumlahBarang + ' ' + namaBarang + '(s): Rp.' + totalHarga;
+    }
+</script>
+
+</body>
+</html>

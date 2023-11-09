@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal 7</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Form Pemesanan Makanan dan Minuman</h2>
+    <p id="hasil_pemesanan"></p>
+    <script>
+        var harga_makanan = 10000;
+        var harga_minuman = 5000;
+      
+        var jumlah_makanan = parseInt(prompt("Masukkan jumlah makanan yang ingin dipesan:", "0"));
+        var jumlah_minuman = parseInt(prompt("Masukkan jumlah minuman yang ingin dipesan:", "0"));
+      
+        var total_harga = harga_makanan * jumlah_makanan + harga_minuman * jumlah_minuman;
+      
+        console.log("Total harga yang harus dibayar adalah : " + total_harga);
+        document.getElementById('hasil_pemesanan').innerHTML = `
+        Jumlah Makanan yang dipesan : ${jumlah_makanan} <br>
+        Jumlah Minuman yang dipesan : ${jumlah_minuman} <br>
+        Total harga yang harus dibayar adalah : Rp.${total_harga}
+    `;
+      </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOAL 1</title>
+    <style>
+        #square {
+            width: 250px;
+            height: 250px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<H1 style="text-align: center;">MENGUBAH WARNA</H1>
+<div id="square"></div>
+<button onclick="ubahWarna()">Ubah Warna</button>
+
+<script>
+    function ubahWarna() {
+        var square = document.getElementById('square');
+
+        // Cek warna latar belakang, jika merah, ubah menjadi biru, dan sebaliknya.
+        if (square.style.backgroundColor === 'red') {
+            square.style.backgroundColor = 'blue';
+        } else {
+            square.style.backgroundColor = 'red';
+        }
+    }
+</script>
+
+</body>
+</html>

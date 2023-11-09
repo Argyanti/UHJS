@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 5</title>
+</head>
+<body>
+    <h2 style="text-align: center; margin-bottom: 100px;">PENDAFTARAN CALON MAHASISWA BARU</h2>
+    <form style="text-align: center;" id="formPendaftaran" onsubmit="return validateForm()">
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama"><br>
+    
+        <label for="nik">Nomor Identitas (NIK):</label><br>
+        <input type="text" id="nik" name="nik"><br>
+    
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+    
+        <label for="telepon">Nomor Telp:</label><br>
+        <input type="tel" id="telepon" name="telepon"><br>
+    
+        <button type="submit">Daftar</button>
+    </form>
+    
+    <script>
+    function validateForm() {
+        var nama = document.getElementById("nama").value;
+        var nik = document.getElementById("nik").value;
+        var email = document.getElementById("email").value;
+        var telepon = document.getElementById("telepon").value;
+    
+        if (nama === "" || nik === "" || email === "" || telepon === "") {
+            alert("Anda harus mengisi data dengan lengkap!");
+            return false;
+        } else {
+            alert("Terimakasih sudah melakukan pendaftaran");
+            return true;
+        }
+    }
+    </script>
+</body>
+</html>
